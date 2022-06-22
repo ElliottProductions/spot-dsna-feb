@@ -13,7 +13,7 @@ function map(arr, callback) {
 
 map([1, 6, 5], (n) => n ** 2);
 
-//Filter Function
+//Filter Functio
 
 function filter(arr, callback) {
   const filteredArr = [];
