@@ -25,3 +25,13 @@ function filter(arr, callback) {
   }
   return filteredArr;
 }
+
+//Punctuation function
+
+function addPunctuation(punc) {
+    return (x) => {
+        return x + punc;
+    };
+};
+const addExcitement = addPunctuation('!!!');
+console.log(addExcitement('Hello world'));
