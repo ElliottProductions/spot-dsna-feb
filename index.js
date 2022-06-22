@@ -1,19 +1,27 @@
-function map(arr, callback) {}
-const array = [1, 6, 5];
-map(array, (numba) => numba ** 2);
-console.log(array);
+//Map Function
+
+function map(arr, callback) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    const item = arr[i];
+    const modifiedItem = callback(item);
+
+    newArray[newArray.length] = modifiedItem;
+  }
+  return newArray;
+}
 
 map([1, 6, 5], (n) => n ** 2);
 
-// Write a function `filter` that takes an array and a predicate callback function:
-// - it returns a _new_ array
-// - it calls the callback function with each element of the passed array and conditionally adds the item to the new array if the predicate function returns a truthy value
+//Filter Function
 
-function filter(arr, predicate) {
-  const newArr = [];
+function filter(arr, callback) {
+  const filteredArr = [];
   for (let i = 0; i < arr.length; i++) {
-    if (predicate(arr[i])) {
-      arr2.push(arr[i]);
+    const item = arr[i];
+    if (callback(item)) {
+      filteredArr[filteredArr.length] = item;
     }
   }
+  return filteredArr;
 }
