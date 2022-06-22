@@ -56,3 +56,14 @@ function fibonacci(n) {
 }
 
 console.log(fibonacci(7));
+
+//Every Function
+
+function every(arr, pred) {
+    for(let i = 0; i<arr.length ; i++){
+        const item = arr[i];
+        if(item % 2 === 0){
+            return true;
+        }
+    }
+}
