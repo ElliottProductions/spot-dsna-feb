@@ -59,11 +59,15 @@ console.log(fibonacci(7));
 
 //Every Function
 
-function every(arr, pred) {
+function every(arr) {
     for(let i = 0; i<arr.length ; i++){
         const item = arr[i];
         if(item % 2 === 0){
             return true;
+        } else {
+            return false;
         }
     }
 }
+
+console.log(every([2,4]));
