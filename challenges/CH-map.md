@@ -19,7 +19,10 @@ Write a function `map` that takes an array and a callback function:
 - it calls the callback function with each element of the passed array and puts the return value in the new array at the same index
 
 ```js
-function map(arr, callback) {
+function map(arr, callback) {}
+const array = [1, 6, 5];
+map(array, (numba) => (numba**2));
+console.log(array);
 ```
 
 > **You can assume valid inputs**
