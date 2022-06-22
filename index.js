@@ -11,9 +11,7 @@ function map(arr, callback) {
   return newArray;
 }
 
-map([1, 6, 5], (n) => n ** 2);
-
-//Filter Functio
+//Filter Function
 
 function filter(arr, callback) {
   const filteredArr = [];
@@ -29,9 +27,21 @@ function filter(arr, callback) {
 //Punctuation function
 
 function addPunctuation(punc) {
-    return (x) => {
-        return x + punc;
-    };
-};
+  return (x) => {
+    return x + punc;
+  };
+}
 const addExcitement = addPunctuation('!!!');
 console.log(addExcitement('Hello world'));
+
+//Add First Element
+
+function addFirst(element) {
+  return (array) => {
+    array.unshift(element);
+    return array;
+  };
+}
+
+const addOrange = addFirst('cat');
+console.log(addOrange(['bird', 'dog', 'lizard']));
